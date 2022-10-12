@@ -1,1 +1,202 @@
+*{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*CONTAINER*/
+.container{
+    background-color: rgb(175, 163, 163);
+    width: 800px;
+    margin: 10px auto;
+}
+/*HEADER*/
+.header{
+    background-color: yellow;
+    line-height: 80px;
+    text-align:center;
+}
+.spanContainer{
+    font-size: 20px;
+    font-weight: bold;;
+}
+/*MENU FLEX*/
+.navBar{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
 
+}
+.itemNav{
+    flex: 50%;
+    text-align: center;
+    padding: 10px;
+}
+/*NAVEGACAO*/
+.navNavegacao{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(88, 81, 81);
+    color: white;
+}
+.navegacao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.buscaNavegacao{
+    display: flex;
+    
+}
+.buscaNavegacao input{
+    padding: 3px;
+}
+/*SIDE*/
+.side{    
+    display: flex;
+    background-color:rgb(160, 137, 137);
+    width: 600px;
+    min-height: 500px;
+    margin: 0px auto;
+    
+}
+/*SIDE CADASTRAR*/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto auto;
+    gap: 20px;
+    
+}
+.formulario input, textarea{
+    font-size: 14px;
+    padding: 10px;
+}
+
+.divBotoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+.divBotoes input{
+    flex: 50%;
+}
+/*SIDE EXIBIR*/
+.divNoticias{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: 0px auto;
+    padding: 5px;
+    gap: 20px;
+}
+
+.itemNoticias{
+    background-color:rgb(70, 54, 54);
+    width: 150px;
+    color: white;
+    padding: 10px;
+    height: 200px;
+    overflow: hidden;
+
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;;
+    color: white;
+    line-height: 40px;
+}
+
+/**MODAL**/
+.fade{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+.modal{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background-color: white;
+    padding: 20px;
+    width: 500px;
+    height: 300px;
+    z-index: 20;
+    animation: animaModal 3s; 
+}
+
+.headerModal{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 20px 0px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.bodyModal{
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 10px;
+    gap: 20px;
+}
+.bodyModal > p{
+    font-size: 14px;
+}
+
+/**MEDIA QUERY**/
+/*HEADER*/
+@media(max-width: 700px){
+    .header{
+        width: 100%;
+    }
+    .navBar{
+        display: block;
+    }
+    .navNavegacao{
+        display: block;
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 600px){
+    .navegacao{
+        display: flex;
+        flex-direction: column;
+    }
+    .navNavegacao{
+        text-align: center;
+    }
+    
+}
+
+/*KEYFRAME*/
+
+@keyframes animaModal{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
